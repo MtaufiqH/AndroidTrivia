@@ -43,6 +43,7 @@
             <TextView
                 android:id="@+id/textQuestionId"
                 android:layout_width="0dp"
+                android:text="@{game.currentQuestion.text}"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
                 android:layout_marginTop="16dp"
@@ -70,31 +71,39 @@
                 app:layout_constraintTop_toBottomOf="@+id/textQuestionId">
 
                 <RadioButton
+                    android:id="@+id/firstAnswerId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:text="@{game.answer[0]}"
                     tools:text="Green"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
                     android:textSize="@dimen/answer_text_size"/>
 
                 <RadioButton
+                    android:id="@+id/secondAnswerId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Red"
+                    android:text="@{game.answer[1]}"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
                     android:textSize="@dimen/answer_text_size"/>
 
                 <RadioButton
+                    android:id="@+id/thirdAnswerId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Blue"
+                    android:text="@{game.answer[2]}"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
                     android:textSize="@dimen/answer_text_size"/>
 
                 <RadioButton
+                    android:id="@+id/fourthAnswerId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Yellow"
+                    android:text="@{game.answer[3]}"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
                     android:textSize="@dimen/answer_text_size"/>
 
