@@ -20,4 +20,5 @@
     <string name="sharing_not_available">Sharing Not Available</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_play">Play</string>
+    <string name="next_match_btn">Next Match</string>
 </resources>
