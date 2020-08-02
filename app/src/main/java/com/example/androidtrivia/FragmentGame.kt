@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.androidtrivia.databinding.FragmentGameBinding
 
 class FragmentGame : Fragment() {
@@ -129,10 +130,12 @@ class FragmentGame : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // we've won
+                        view?.findNavController()?.navigate(R.id.action_fragmentGame_to_gameWonFragment)
                     }
 
                 } else {
                     // game over
+                    view?.findNavController()?.navigate(R.id.action_fragmentGame_to_fragmentGameOver)
                 }
             }
         }

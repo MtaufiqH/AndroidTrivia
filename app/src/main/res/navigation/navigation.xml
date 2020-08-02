@@ -9,7 +9,7 @@
         android:id="@+id/fragmentTitle"
         android:name="com.example.androidtrivia.FragmentTitle"
         android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/fragmentTitle_to_fragmentGame"
             app:destination="@id/fragmentGame" />
@@ -18,5 +18,22 @@
         android:id="@+id/fragmentGame"
         android:name="com.example.androidtrivia.FragmentGame"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_fragmentGame_to_gameWonFragment"
+            app:destination="@id/gameWonFragment" />
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentGameOver"
+            app:destination="@id/fragmentGameOver" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="com.example.androidtrivia.FragmentWon"
+        android:label="fragment_won"
+        tools:layout="@layout/fragment_won" />
+    <fragment
+        android:id="@+id/fragmentGameOver"
+        android:name="com.example.androidtrivia.FragmentGameOver"
+        android:label="fragment_gameover"
+        tools:layout="@layout/fragment_gameover" />
 </navigation>
