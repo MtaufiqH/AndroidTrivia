@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.androidtrivia.R
 import com.example.androidtrivia.databinding.FragmentGameoverBinding
+import kotlinx.android.synthetic.main.fragment_gameover.*
 
 class FragmentGameOver : Fragment() {
     override fun onCreateView(
@@ -21,7 +22,7 @@ class FragmentGameOver : Fragment() {
 
         binding.apply {
             tryAgainButton.setOnClickListener {
-                it.findNavController().navigate(R.id.action_fragmentGame_to_fragmentGameOver)
+                it.findNavController().navigate(R.id.action_fragmentGameOver_to_fragmentGame)
             }
         }
 

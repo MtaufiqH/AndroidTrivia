@@ -21,7 +21,7 @@ class FragmentWon : Fragment() {
 
 
         binding.nextMatchButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_fragmentGame_to_gameWonFragment)
+            it.findNavController().navigate(R.id.action_gameWonFragment_to_fragmentGame)
         }
 
         return binding.root
