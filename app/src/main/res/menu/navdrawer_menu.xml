@@ -9,5 +9,5 @@
     <item
         android:id="@+id/fragmentAbout"
         android:title="@string/about"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:icon="@drawable/about_android_trivia"/>
 </menu>
