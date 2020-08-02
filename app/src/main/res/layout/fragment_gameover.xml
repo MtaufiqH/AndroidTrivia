@@ -22,7 +22,7 @@
             android:layout_marginBottom="16dp"
             android:scaleType="fitCenter"
             android:src="@drawable/try_again"
-            app:layout_constraintBottom_toTopOf="@+id/nextMatchButton"
+            app:layout_constraintBottom_toTopOf="@+id/tryAgainButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
             android:contentDescription="@string/android_trivia" />
 
         <Button
-            android:id="@+id/nextMatchButton"
+            android:id="@+id/tryAgainButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/button_padding"
