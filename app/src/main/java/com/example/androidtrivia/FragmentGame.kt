@@ -130,12 +130,12 @@ class FragmentGame : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // we've won
-                        view?.findNavController()?.navigate(R.id.action_fragmentGame_to_gameWonFragment)
+                        view?.findNavController()?.navigate(FragmentGameDirections.actionFragmentGameToGameWonFragment())
                     }
 
                 } else {
                     // game over
-                    view?.findNavController()?.navigate(R.id.action_fragmentGame_to_fragmentGameOver)
+                    view?.findNavController()?.navigate(FragmentGameDirections.actionFragmentGameToFragmentGameOver())
                 }
             }
         }
