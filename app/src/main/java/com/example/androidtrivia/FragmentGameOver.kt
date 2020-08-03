@@ -22,7 +22,7 @@ class FragmentGameOver : Fragment() {
 
         binding.apply {
             tryAgainButton.setOnClickListener {
-                it.findNavController().navigate(R.id.action_fragmentGameOver_to_fragmentGame)
+                it.findNavController().navigate(FragmentGameOverDirections.actionFragmentGameOverToFragmentGame())
             }
         }
 

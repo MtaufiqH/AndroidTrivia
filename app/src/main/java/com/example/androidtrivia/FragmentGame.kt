@@ -1,10 +1,10 @@
 package com.example.androidtrivia
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -50,7 +50,12 @@ class FragmentGame : Fragment() {
             // Question Five
             Question(
                 text = "What method do you use to inflate layouts in fragments?",
-                answer = listOf("onCreateView()", "onActivityCreated()", "onCreateLayout()", "onInflateLayout()")
+                answer = listOf(
+                    "onCreateView()",
+                    "onActivityCreated()",
+                    "onCreateLayout()",
+                    "onInflateLayout()"
+                )
             ),
 
             // Question Six
@@ -62,7 +67,12 @@ class FragmentGame : Fragment() {
             // Question Seven
             Question(
                 text = "Which class do you use to create a vector drawable?",
-                answer = listOf("VectorDrawable", "AndroidVectorDrawable", "DrawableVector", "AndroidVector")
+                answer = listOf(
+                    "VectorDrawable",
+                    "AndroidVectorDrawable",
+                    "DrawableVector",
+                    "AndroidVector"
+                )
             ),
 
             // Question Eight
@@ -74,7 +84,12 @@ class FragmentGame : Fragment() {
             // Question Nine
             Question(
                 text = "Which XML element lets you register an activity with the launcher activity?",
-                answer = listOf("intent-filter", "app-registry", "launcher-registry", "app-launcher")
+                answer = listOf(
+                    "intent-filter",
+                    "app-registry",
+                    "launcher-registry",
+                    "app-launcher"
+                )
             ),
 
             // Question Ten
@@ -130,12 +145,19 @@ class FragmentGame : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // we've won
-                        view?.findNavController()?.navigate(FragmentGameDirections.actionFragmentGameToGameWonFragment())
+                        view?.findNavController()
+                            ?.navigate(
+                                FragmentGameDirections
+                                    .actionFragmentGameToGameWonFragment(numQuestion, questionIndex)
+                            )
                     }
 
                 } else {
                     // game over
-                    view?.findNavController()?.navigate(FragmentGameDirections.actionFragmentGameToFragmentGameOver())
+                    view?.findNavController()
+                        ?.navigate(FragmentGameDirections
+                                .actionFragmentGameToFragmentGameOver()
+                        )
                 }
             }
         }
@@ -163,7 +185,8 @@ class FragmentGame : Fragment() {
         // and shuffle them
         answer.shuffle()
         (activity as AppCompatActivity).supportActionBar?.title = getString(
-            R.string.title_android_trivia_question, questionIndex + 1, numQuestion)
+            R.string.title_android_trivia_question, questionIndex + 1, numQuestion
+        )
     }
 
 }

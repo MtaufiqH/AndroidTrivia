@@ -23,8 +23,9 @@ class FragmentTitle : Fragment() {
 
 
         binding.apply {
-            btnPlay.setOnClickListener {
-                it.findNavController().navigate(R.id.fragmentTitle_to_fragmentGame)
+            btnPlay.setOnClickListener { view: View ->
+                view.findNavController()
+                    .navigate(FragmentTitleDirections.fragmentTitleToFragmentGame())
             }
         }
 
